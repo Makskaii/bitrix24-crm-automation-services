@@ -1,0 +1,24 @@
+# Runtime configuration and credentials
+**/.env
+**/.env.*
+**/*secret*
+**/*credential*
+
+# Installed dependencies and process output
+**/node_modules/
+**/logs/
+**/*.log
+
+# Generated or runtime data (not source assets)
+document-generator/failed-docx/
+postponed-deals-control/data/*
+!postponed-deals-control/data/.gitkeep
+**/coverage/
+**/tmp/
+**/temp/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

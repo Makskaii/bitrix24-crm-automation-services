@@ -1,0 +1,10 @@
+{
+  "name": "document-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "bind:event": "node scripts/bind-event.mjs"
+  }
+}

@@ -1,0 +1,18 @@
+[Unit]
+Description=RVI Mavriki Document Signing
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/rvi-mavriki/document-signing
+Environment=NODE_ENV=production
+EnvironmentFile=-/var/www/rvi-mavriki/document-signing/.env
+ExecStart=/usr/bin/node src/server.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=15
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

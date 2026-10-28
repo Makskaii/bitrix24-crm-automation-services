@@ -1,0 +1,18 @@
+[Unit]
+Description=RVI Mavriki Email Stage Control
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/rvi-mavriki/email-stage-control
+Environment=NODE_ENV=production
+EnvironmentFile=-/var/www/rvi-mavriki/email-stage-control/.env
+ExecStart=/usr/bin/node src/server.js
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=15
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target
